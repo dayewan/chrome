@@ -8,5 +8,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="react-dom.production" level="application" />
+    <orderEntry type="library" name="react.production" level="application" />
+    <orderEntry type="library" name="react.production" level="application" />
+    <orderEntry type="library" name="react-dom.production" level="application" />
   </component>
 </module>
