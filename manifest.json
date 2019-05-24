@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Spider",
+  "version": "0.0.1",
+  "description": "Good Spider",
+  "icons": {
+    "16": "image/icon.png",
+    "48": "image/icon.png",
+    "128": "image/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "image/icon.png",
+    "default_title": "bridge",
+    "default_popup": "popup.html"
+  },
+  "background":{
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/jquery-3.3.1.min.js",
+        "js/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": ["js/inject.js"],
+  "homepage_url": "http://wordpress.easygame.store",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}
