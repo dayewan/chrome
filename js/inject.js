@@ -33,11 +33,7 @@
         );
     }
 
-    console.log(host);
-    console.log(/admin.*?waiwaimall.com/.test(host));
-    if (/admin.*?waiwaimall.com/.test(host)) {
-        $('.logo-lg').text('威威商城');
-        $('.skin-blue .main-header .navbar').css('background-color', '#1890ff');
+    if (/admin.*?hibobi.com/.test(host)) {
         if (/good\/audit/.test(path)) {
             $('span[data-target="#modal-setPrice"]').before('<input id="multiple" type="number" style="display:inline-block;width: 100px;;" class="form-control" value="4"><button id="setting-price" class="btn btn-danger">设置价格</button>')
 
@@ -91,11 +87,7 @@
             mo.observe(document.body, option);
         }
     }
-    if (/admin.*?cucoe.com/.test(host)) {
-        $('.logo-lg').html('巨逗');
-        $('.skin-blue .main-header .navbar').css('background-color', '#1890ff')
-    }
-    if (/seller.*?waiwaimall.com/.test(host) && (/\/product\/edit/.test(path) || /\/product\/create/.test(path))) {
+    if (/seller.*?hibobi.com/.test(host) && (/\/product\/edit/.test(path) || /\/product\/create/.test(path))) {
         $('#addTable').before('<button type="button" class="btn btn-info" id="gegeda">what?</button>');
         $('#gegeda').on('click', function () {
             let code_el = $('.code');
