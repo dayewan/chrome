@@ -33,7 +33,7 @@
         );
     }
 
-    if (/admin.*?hibobi.com/.test(host)) {
+    if (/admin.*?cucoe.com/.test(host)) {
         if (/good\/audit/.test(path)) {
             $('span[data-target="#modal-setPrice"]').before('<input id="multiple" type="number" style="display:inline-block;width: 100px;;" class="form-control" value="4"><button id="setting-price" class="btn btn-danger">设置价格</button>')
 
@@ -58,7 +58,7 @@
                 })
             });
             let en_title = $('input[name="good_en_title"]');
-            let chinese = $($($('label[for="inputEmail3"]')[5]).next().find('input')[0]).val();
+            let chinese = $($('input[type="text"]')[12]).val();
             en_title.parents('div.form-group').append(`<div class="col-sm-12" style="line-height:40px;min-height: 40px;background-color: rgb(24, 144, 255);"><span>${chinese}</span></div>`);
             $('#title-title').on('click', function () {
                 en_title.val(toTitleCase(en_title.val()));

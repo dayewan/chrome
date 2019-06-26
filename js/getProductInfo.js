@@ -785,7 +785,7 @@
                 console.log('收到来自后台的回复：' + response);
             });
             break;
-        case 'www.waiwaimall.com':
+        case 'www.cucoe.com':
             if (pathname.match('/categories/')) {
                 let image = $('.goods-list img');
                 image.each(function (item) {
@@ -839,9 +839,12 @@
                 console.log('收到来自后台的回复：' + response);
             });
             break;
-        case 'admin.waiwaimall.com':
+        case 'admin.cucoe.com':
             waiwaimallImage = [];
             if (pathname.match('/good')) {
+                const date = new Date()
+                title = String(date.getYear()) + String(date.getMonth()) + String(date.getDate()) + '_' + String(date.getHours()) + '_' + String(date.getMinutes()) + '_' + String(date.getSeconds())
+
                 let tr = $('#example2>tbody>tr');
                 tr.each(function (item) {
                     let name = $($(this).find('input[type="checkbox"]')[0]).data('id');
